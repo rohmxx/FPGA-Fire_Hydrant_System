@@ -1,0 +1,3 @@
+vhdl work "x7segb.vhd"
+vhdl work "clkdiv.vhd"
+vhdl work "fire_alarm.vhd"

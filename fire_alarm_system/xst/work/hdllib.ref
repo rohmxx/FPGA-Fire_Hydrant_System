@@ -1,0 +1,7 @@
+AR clkdiv behavioral "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" sub00/vhpl03 1654831439
+EN fire_alarm NULL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" sub00/vhpl00 1654831442
+AR x7segb x7seg "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" sub00/vhpl06 1654831441
+EN clkdiv NULL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" sub00/vhpl02 1654831438
+AR fire_alarm behavioral "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" sub00/vhpl04 1654831443
+EN x7segb NULL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" sub00/vhpl05 1654831440
+EN fire_als1 NULL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" sub00/vhpl01 1654827123

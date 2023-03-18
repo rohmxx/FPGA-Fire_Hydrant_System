@@ -1,0 +1,21 @@
+NET button LOC = M13;
+NET clr LOC = L14;
+NET fire LOC = K13;
+
+NET hydrant LOC = K12;
+NET alarm LOC = P14;
+NET sensor LOC = P11;
+
+NET a_to_g(0) LOC = N16;
+NET a_to_g(1) LOC = F13;
+NET a_to_g(2) LOC = R16;
+NET a_to_g(3) LOC = P15;
+NET a_to_g(4) LOC = N15;
+NET a_to_g(5) LOC = G13;
+NET a_to_g(6) LOC = E14;
+NET dp LOC = P16;
+
+NET an(0) LOC = D14;
+NET an(1) LOC = G14;
+NET an(2) LOC = F14;
+NET an(3) LOC = E13;

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\PENS\CE B 2021\Semester 2\Rangkaian Logika 2\Praktikum\FSM Project\fire_alarm_system\fire_alarm.ncd
+OUTFILE=E:\PENS\CE B 2021\Semester 2\Rangkaian Logika 2\Praktikum\FSM Project\fire_alarm_system\fire_alarm.bit
+FAMILY=Spartan3
+PART=xc3s200-4ft256
+WORKINGDIR=E:\PENS\CE B 2021\Semester 2\Rangkaian Logika 2\Praktikum\FSM Project\fire_alarm_system
+LICENSE=WebPack
+USER_INFO=__0_0_0

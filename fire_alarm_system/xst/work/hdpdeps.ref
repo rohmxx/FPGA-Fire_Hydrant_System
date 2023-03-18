@@ -1,0 +1,22 @@
+V3 11
+FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" 2022/06/10.09:30:12 P.58f
+EN work/clkdiv 1654831438 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/clkdiv/Behavioral 1654831439 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" \
+      EN work/clkdiv 1654831438
+FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" 2022/06/10.10:23:49 P.58f
+EN work/fire_alarm 1654831442 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/fire_alarm/Behavioral 1654831443 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" \
+      EN work/fire_alarm 1654831442 CP clkdiv CP x7segb
+FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" 2022/06/10.10:18:14 P.58f
+EN work/x7segb 1654831440 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/x7segb/x7seg 1654831441 \
+      FL "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" \
+      EN work/x7segb 1654831440

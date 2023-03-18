@@ -1,0 +1,571 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.22 secs
+ 
+--> Reading design: fire_alarm.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "fire_alarm.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "fire_alarm"
+Output Format                      : NGC
+Target Device                      : xc3s200-4-ft256
+
+---- Source Options
+Top Module Name                    : fire_alarm
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" in Library work.
+Architecture behavioral of Entity clkdiv is up to date.
+Compiling vhdl file "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd" in Library work.
+Architecture x7seg of Entity x7segb is up to date.
+Compiling vhdl file "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" in Library work.
+Entity <fire_alarm> compiled.
+Entity <fire_alarm> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <fire_alarm> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkdiv> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <x7segb> in library <work> (architecture <x7seg>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <fire_alarm> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd" line 46: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <clr>
+Entity <fire_alarm> analyzed. Unit <fire_alarm> generated.
+
+Analyzing Entity <clkdiv> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd" line 14: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <q>
+Entity <clkdiv> analyzed. Unit <clkdiv> generated.
+
+Analyzing Entity <x7segb> in library <work> (Architecture <x7seg>).
+Entity <x7segb> analyzed. Unit <x7segb> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clkdiv>.
+    Related source file is "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/clkdiv.vhd".
+    Found 24-bit up counter for signal <q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <clkdiv> synthesized.
+
+
+Synthesizing Unit <x7segb>.
+    Related source file is "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/x7segb.vhd".
+    Found 1-bit 4-to-1 multiplexer for signal <aen$mux0000> created at line 74.
+    Found 21-bit up counter for signal <clkdiv>.
+    Found 4-bit 4-to-1 multiplexer for signal <digit>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   5 Multiplexer(s).
+Unit <x7segb> synthesized.
+
+
+Synthesizing Unit <fire_alarm>.
+    Related source file is "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk48                     (rising_edge)        |
+    | Reset              | clr                       (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | disarm                                         |
+    | Power Up State     | disarm                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 16-bit latch for signal <x>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <sensor>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <fire_alarm> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 2
+ 21-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 1
+ 1-bit register                                        : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:2]> with gray encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ disarm    | 00
+ arm       | 01
+ intrution | 11
+-----------------------
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <6>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <7>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <12>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <13>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <14>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <0> (without init value) has a constant value of 0 in block <15>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Counters                                             : 2
+ 21-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+# Latches                                              : 1
+ 16-bit latch                                          : 1
+# Multiplexers                                         : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <8> in Unit <LPM_LATCH_1> is equivalent to the following 2 FFs/Latches, which will be removed : <5> <0> 
+INFO:Xst:2261 - The FF/Latch <4> in Unit <LPM_LATCH_1> is equivalent to the following FF/Latch, which will be removed : <1> 
+INFO:Xst:2261 - The FF/Latch <15> in Unit <LPM_LATCH_1> is equivalent to the following 10 FFs/Latches, which will be removed : <14> <13> <12> <11> <10> <9> <7> <6> <3> <2> 
+WARNING:Xst:1710 - FF/Latch <15> (without init value) has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <u1/q_23> of sequential type is unconnected in block <fire_alarm>.
+
+Optimizing unit <fire_alarm> ...
+
+Optimizing unit <x7segb> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block fire_alarm, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 47
+ Flip-Flops                                            : 47
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : fire_alarm.ngr
+Top Level Output File Name         : fire_alarm
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 146
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 42
+#      LUT2                        : 5
+#      LUT3                        : 3
+#      LUT4                        : 3
+#      MUXCY                       : 42
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 44
+# FlipFlops/Latches                : 49
+#      FDC                         : 46
+#      FDE                         : 1
+#      LD_1                        : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 3
+#      OBUF                        : 15
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-4 
+
+ Number of Slices:                       30  out of   1920     1%  
+ Number of Slice Flip Flops:             48  out of   3840     1%  
+ Number of 4 input LUTs:                 57  out of   3840     1%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    173    10%  
+    IOB Flip Flops:                       1
+ Number of GCLKs:                         2  out of      8    25%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+u1/q_221                           | BUFG                   | 24    |
+clk                                | BUFGP                  | 23    |
+state_FSM_FFd1                     | NONE(x_4)              | 2     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+clr                                | IBUF                   | 46    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.298ns (Maximum Frequency: 188.751MHz)
+   Minimum input arrival time before clock: 4.714ns
+   Maximum output required time after clock: 11.147ns
+   Maximum combinational path delay: 8.929ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.298ns (frequency: 188.751MHz)
+  Total number of paths / destination ports: 276 / 23
+-------------------------------------------------------------------------
+Delay:               5.298ns (Levels of Logic = 23)
+  Source:            u1/q_1 (FF)
+  Destination:       u1/q_22 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u1/q_1 to u1/q_22
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.720   1.140  u1/q_1 (u1/q_1)
+     LUT1:I0->O            1   0.551   0.000  u1/Mcount_q_cy<1>_rt (u1/Mcount_q_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  u1/Mcount_q_cy<1> (u1/Mcount_q_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<2> (u1/Mcount_q_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<3> (u1/Mcount_q_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<4> (u1/Mcount_q_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<5> (u1/Mcount_q_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<6> (u1/Mcount_q_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<7> (u1/Mcount_q_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<8> (u1/Mcount_q_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<9> (u1/Mcount_q_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<10> (u1/Mcount_q_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<11> (u1/Mcount_q_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<12> (u1/Mcount_q_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<13> (u1/Mcount_q_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<14> (u1/Mcount_q_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<15> (u1/Mcount_q_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<16> (u1/Mcount_q_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<17> (u1/Mcount_q_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<18> (u1/Mcount_q_cy<18>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<19> (u1/Mcount_q_cy<19>)
+     MUXCY:CI->O           1   0.064   0.000  u1/Mcount_q_cy<20> (u1/Mcount_q_cy<20>)
+     MUXCY:CI->O           0   0.064   0.000  u1/Mcount_q_cy<21> (u1/Mcount_q_cy<21>)
+     XORCY:CI->O           1   0.904   0.000  u1/Mcount_q_xor<22> (Result<22>)
+     FDC:D                     0.203          u1/q_22
+    ----------------------------------------
+    Total                      5.298ns (4.158ns logic, 1.140ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u1/q_221'
+  Clock period: 5.170ns (frequency: 193.424MHz)
+  Total number of paths / destination ports: 234 / 23
+-------------------------------------------------------------------------
+Delay:               5.170ns (Levels of Logic = 21)
+  Source:            u2/clkdiv_1 (FF)
+  Destination:       u2/clkdiv_20 (FF)
+  Source Clock:      u1/q_221 rising
+  Destination Clock: u1/q_221 rising
+
+  Data Path: u2/clkdiv_1 to u2/clkdiv_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.720   1.140  u2/clkdiv_1 (u2/clkdiv_1)
+     LUT1:I0->O            1   0.551   0.000  u2/Mcount_clkdiv_cy<1>_rt (u2/Mcount_clkdiv_cy<1>_rt)
+     MUXCY:S->O            1   0.500   0.000  u2/Mcount_clkdiv_cy<1> (u2/Mcount_clkdiv_cy<1>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<2> (u2/Mcount_clkdiv_cy<2>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<3> (u2/Mcount_clkdiv_cy<3>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<4> (u2/Mcount_clkdiv_cy<4>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<5> (u2/Mcount_clkdiv_cy<5>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<6> (u2/Mcount_clkdiv_cy<6>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<7> (u2/Mcount_clkdiv_cy<7>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<8> (u2/Mcount_clkdiv_cy<8>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<9> (u2/Mcount_clkdiv_cy<9>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<10> (u2/Mcount_clkdiv_cy<10>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<11> (u2/Mcount_clkdiv_cy<11>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<12> (u2/Mcount_clkdiv_cy<12>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<13> (u2/Mcount_clkdiv_cy<13>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<14> (u2/Mcount_clkdiv_cy<14>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<15> (u2/Mcount_clkdiv_cy<15>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<16> (u2/Mcount_clkdiv_cy<16>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<17> (u2/Mcount_clkdiv_cy<17>)
+     MUXCY:CI->O           1   0.064   0.000  u2/Mcount_clkdiv_cy<18> (u2/Mcount_clkdiv_cy<18>)
+     MUXCY:CI->O           0   0.064   0.000  u2/Mcount_clkdiv_cy<19> (u2/Mcount_clkdiv_cy<19>)
+     XORCY:CI->O           1   0.904   0.000  u2/Mcount_clkdiv_xor<20> (u2/Result<20>)
+     FDC:D                     0.203          u2/clkdiv_20
+    ----------------------------------------
+    Total                      5.170ns (4.030ns logic, 1.140ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'u1/q_221'
+  Total number of paths / destination ports: 6 / 4
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            clr (PAD)
+  Destination:       sensor (FF)
+  Destination Clock: u1/q_221 rising
+
+  Data Path: clr to sensor
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            47   0.821   1.939  clr_IBUF (clr_IBUF)
+     INV:I->O              1   0.551   0.801  clr_inv1_INV_0 (clr_inv)
+     FDE:CE                    0.602          sensor
+    ----------------------------------------
+    Total                      4.714ns (1.974ns logic, 2.740ns route)
+                                       (41.9% logic, 58.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u1/q_221'
+  Total number of paths / destination ports: 23 / 10
+-------------------------------------------------------------------------
+Offset:              11.147ns (Levels of Logic = 4)
+  Source:            u2/clkdiv_19 (FF)
+  Destination:       a_to_g<5> (PAD)
+  Source Clock:      u1/q_221 rising
+
+  Data Path: u2/clkdiv_19 to a_to_g<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.720   1.342  u2/clkdiv_19 (u2/clkdiv_19)
+     LUT3:I0->O            1   0.551   0.000  u2/Mmux_digit_41 (u2/Mmux_digit_41)
+     MUXF5:I0->O           3   0.360   1.102  u2/Mmux_digit_2_f5_0 (a_to_g_3_OBUF)
+     LUT2:I1->O            2   0.551   0.877  u2/a_to_g<5>1 (a_to_g_4_OBUF)
+     OBUF:I->O                 5.644          a_to_g_5_OBUF (a_to_g<5>)
+    ----------------------------------------
+    Total                     11.147ns (7.826ns logic, 3.321ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'state_FSM_FFd1'
+  Total number of paths / destination ports: 17 / 6
+-------------------------------------------------------------------------
+Offset:              10.820ns (Levels of Logic = 4)
+  Source:            x_4 (LATCH)
+  Destination:       a_to_g<5> (PAD)
+  Source Clock:      state_FSM_FFd1 rising
+
+  Data Path: x_4 to a_to_g<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD_1:G->Q             3   0.633   1.102  x_4 (x_4)
+     LUT3:I1->O            1   0.551   0.000  u2/Mmux_digit_41 (u2/Mmux_digit_41)
+     MUXF5:I0->O           3   0.360   1.102  u2/Mmux_digit_2_f5_0 (a_to_g_3_OBUF)
+     LUT2:I1->O            2   0.551   0.877  u2/a_to_g<5>1 (a_to_g_4_OBUF)
+     OBUF:I->O                 5.644          a_to_g_5_OBUF (a_to_g<5>)
+    ----------------------------------------
+    Total                     10.820ns (7.739ns logic, 3.081ns route)
+                                       (71.5% logic, 28.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               8.929ns (Levels of Logic = 3)
+  Source:            fire (PAD)
+  Destination:       hydrant (PAD)
+
+  Data Path: fire to hydrant
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   0.821   1.112  fire_IBUF (fire_IBUF)
+     LUT2:I1->O            1   0.551   0.801  hydrant1 (hydrant_OBUF)
+     OBUF:I->O                 5.644          hydrant_OBUF (hydrant)
+    ----------------------------------------
+    Total                      8.929ns (7.016ns logic, 1.913ns route)
+                                       (78.6% logic, 21.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.41 secs
+ 
+--> 
+
+Total memory usage is 4496984 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   16 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

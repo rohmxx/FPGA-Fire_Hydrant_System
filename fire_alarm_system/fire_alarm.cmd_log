@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 "fire_alarm.ngc" fire_alarm.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o fire_alarm_map.ncd fire_alarm.ngd fire_alarm.pcf 
+par -w -intstyle ise -ol high -t 1 fire_alarm_map.ncd fire_alarm.ncd fire_alarm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fire_alarm.twx fire_alarm.ncd -o fire_alarm.twr fire_alarm.pcf 
+bitgen -intstyle ise -f fire_alarm.ut fire_alarm.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-ft256-4 "fire_alarm.ngc" fire_alarm.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o fire_alarm_map.ncd fire_alarm.ngd fire_alarm.pcf 
+par -w -intstyle ise -ol high -t 1 fire_alarm_map.ncd fire_alarm.ncd fire_alarm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fire_alarm.twx fire_alarm.ncd -o fire_alarm.twr fire_alarm.pcf 
+bitgen -intstyle ise -f fire_alarm.ut fire_alarm.ncd 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+xst -intstyle ise -ifn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.xst" -ofn "E:/PENS/CE B 2021/Semester 2/Rangkaian Logika 2/Praktikum/FSM Project/fire_alarm_system/fire_alarm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s200-ft256-4 "fire_alarm.ngc" fire_alarm.ngd  
+map -intstyle ise -p xc3s200-ft256-4 -cm area -ir off -pr off -c 100 -o fire_alarm_map.ncd fire_alarm.ngd fire_alarm.pcf 
+par -w -intstyle ise -ol high -t 1 fire_alarm_map.ncd fire_alarm.ncd fire_alarm.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml fire_alarm.twx fire_alarm.ncd -o fire_alarm.twr fire_alarm.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f fire_alarm.ut fire_alarm.ncd 
